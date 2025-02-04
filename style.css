@@ -16,11 +16,13 @@ canvas {
 
     background-color: black;
 
+    margin: auto;
+
     display: none;
 
 }
 
-#startBtn {
+#StartGameButton {
 
     font-size: 20px;
 
@@ -29,6 +31,8 @@ canvas {
     margin: 20px;
 
     border: none;
+    
+    margin: auto;
 
     border-radius: 5px;
 
@@ -40,7 +44,7 @@ canvas {
 
 }
 
-#startBtn:hover {
+#StartGameButton:hover {
 
     background-color: #0056b3;
 

@@ -2,7 +2,7 @@ const canvas = document.getElementById("gameCanvas");
 
 const ctx = canvas.getContext("2d");
 
-const StartGameButton = document.getElementById("startBtn");
+const StartGameButton = document.getElementById("StartGameButton");
 
 const controls = document.getElementById("controls");
 
@@ -14,7 +14,7 @@ canvas.width = canvasSize;
 
 canvas.height = canvasSize;
 
-let snake = [{ x: 100, y: 100 }];
+let snake = [{ x: 200, y: 200 }];
 
 let direction = { x: gridSize, y: 0 };
 
@@ -72,7 +72,7 @@ function update() {
 
         gameRunning = false;
 
-        startBtn.style.display = "block";
+        StartGameButton.style.display = "block";
 
         return;
 
@@ -144,11 +144,11 @@ document.getElementById("right").addEventListener("click", () => {
 
 // **Başlat Butonu Oyun Başlatma**
 
-startBtn.addEventListener("click", () => {
+StartGameButton.addEventListener("click", () => {
 
     gameRunning = true;
 
-    snake = [{ x: 180, y: 100 }];
+    snake = [{ x: 200, y: 200 }];
 
     direction = { x: gridSize, y: 0 };
 
