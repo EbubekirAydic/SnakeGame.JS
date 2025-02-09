@@ -24,6 +24,39 @@ let score = 0;
 
 let gameRunning = false;
 
+
+//Rastgele sayı üretme fonksiyonu
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+  
+//İçeriği değiştirme fonksiyonu
+function innerHTML(girdi, girilen) {
+    document.getElementById(girdi).innerHTML = girilen;
+}
+  
+//Menüye gitme fonksiyonu
+function GoToFunction(Open){
+  
+    setTimeout(function () {
+      const elements = document.getElementsByClassName("menu");
+  
+      // Döngüyle elemanlara erişme
+      for (let i = 0; i < elements.length; i++) {
+          elements[i].classList.add("close");
+  
+      }
+  
+      document.getElementById(Open).classList.remove("close");
+  
+    }, 100);
+  
+    
+}
+
+
+
+
 function randomFood() {
 
     return {
@@ -68,8 +101,6 @@ function update() {
 
     if (head.x < 0 || head.x >= canvasSize || head.y < 0 || head.y >= canvasSize || snake.some(segment => segment.x === head.x && segment.y === head.y)) {
 
-        alert("Oyun Bitti! Skor: " + score);
-
         gameRunning = false;
 
         StartGameButton.style.display = "block";
@@ -82,7 +113,7 @@ function update() {
 
     if (head.x === food.x && head.y === food.y) {
 
-        score += 10;
+        score += 1;
 
         food = randomFood();
 
@@ -142,10 +173,17 @@ document.getElementById("right").addEventListener("click", () => {
 
 });
 
-// **Başlat Butonu Oyun Başlatma**
+// Başlat Butonu Oyun Başlatma
 
 StartGameButton.addEventListener("click", () => {
+    GoToFunction("gameMenu");
+    StartGame();
+});
 
+// Oyun Başlatma
+function StartGame() {
+
+    console.log("AAAA");
     gameRunning = true;
 
     snake = [{ x: 200, y: 200 }];
@@ -162,9 +200,14 @@ StartGameButton.addEventListener("click", () => {
 
     controls.style.display = "flex";
 
-    gameLoop();
+    draw();
+    setTimeout(() => {
 
-});
+        gameLoop();
+
+    }, 3000);
+
+}
 
 function gameLoop() {
 

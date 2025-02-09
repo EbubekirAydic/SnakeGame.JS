@@ -23,79 +23,47 @@ canvas {
 }
 
 #StartGameButton {
-
     font-size: 20px;
-
     padding: 10px 20px;
-
-    margin: 20px;
-
     border: none;
-    
-    margin: auto;
-
-    border-radius: 5px;
-
-    background-color: #007bff;
-
+    border-radius: 10px;
+    background-color: #00aa1a;
     color: white;
-
     cursor: pointer;
-
+    transition: background-color 0.3s, padding 0.2s;
 }
 
 #StartGameButton:hover {
-
-    background-color: #0056b3;
-
+    background-color: #008b1e;
+    padding: 12px 22px;
 }
-
-#controls {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    margin-top: 10px;
-
+#StartGameButton:active{
+    background-color: #00c31e;
+    padding: 10px 20px;
 }
 
 #controls button {
-
-    font-size: 30px;
-
-    padding: 10px;
-
-    margin: 5px;
-
+    font-size: 40px;
     width: 60px;
-
     height: 60px;
-
     border: none;
-
     border-radius: 10px;
-
-    background-color: #28a745;
-
+    background-color: #ff000000;
     color: white;
-
     cursor: pointer;
-
+    transition: background-color 0.1s, font-size 0.2s;
 }
 
 #controls button:hover {
-
+    font-size: 43px;
     background-color: #218838;
-
 }
 
-#controls div {
+#controls button:active {
+    font-size: 40px;
+    background-color: #04cb2f;
+}
 
-    display: flex;
-
-    gap: 10px;
-
+.close{
+    display: none;
 }

@@ -9,43 +9,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Yılan Oyunu</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     
     <link rel="stylesheet" href="Assets/style.css">
 
+    <link rel="stylesheet" href="Assets/Boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/Boostrap/css/bootstrap.min.css.map">
 </head>
 
-<body>
+<body class="bg-dark">
 
-    <h1>Yılan Oyunu</h1>
+    <div id="anaMenu" class="container p-3 text-white text-center menu">
 
-    <canvas id="gameCanvas"></canvas>
-
-    <h2 id="score">Skor: 0</h2>
-
-    
-
-    <button id="StartGameButton">Başlat</button>
-
-    <!-- Mobil Kontroller -->
-
-    <div id="controls" style="display: none;">
-
-        <button id="up">⬆</button>
-
-        <div>
-
-            <button id="left">⬅</button>
-
-            <button id="down">⬇</button>
-
-            <button id="right">➡</button>
-
+        <div class="row my-1">
+            <div class="col">
+                <h1>Yılan Oyunu</h1>
+            </div>
         </div>
 
+        <div class="row my-1">
+            <div class="col">
+                <h2 id="score">Skor: 0</h2>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col">
+                <button id="StartGameButton">Başlat</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="gameMenu" class="container p-3 text-white text-center close menu">
+
+        <div class="row my-1">
+            <div class="col">
+                <h1>Yılan Oyunu</h1>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col">
+                <h2 id="score">Skor: 0</h2>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col">
+                <canvas id="gameCanvas"></canvas>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col">
+                <button id="StartGameButton">Başlat</button>
+            </div>
+        </div>
+    </div>
+    <!-- Mobil Kontroller -->
+
+
+    <div id="controls" class="container text-white text-center">
+
+        <div class="row my-1">
+            <div class="col align-self-center">
+                <button id="up"><i class="fa-solid fa-square-caret-up"></i></button>
+            </div>
+        </div>
+
+        <div class="row my-1">
+            <div class="col align-self-center">
+                <button id="left"><i class="fa-solid fa-square-caret-left"></i></button>        
+            </div>
+            <div class="col align-self-center">
+                <button id="down"><i class="fa-solid fa-square-caret-down"></i></button>        
+            </div>
+            <div class="col align-self-center">
+                <button id="right"><i class="fa-solid fa-square-caret-right"></i></button>        
+            </div>
+        </div>
     </div>
 
     <script src="Assets/script.js"></script>
-
+    <script src="Assets/Boostrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
